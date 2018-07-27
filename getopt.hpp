@@ -168,10 +168,10 @@ struct getopt : public std::map< std::string, std::string >
                 (*this)[ tokens[0] ] = tokens[2];
             else
             if( size == 2 && tokens[1] == "=" )
-                (*this)[ tokens[0] ] = true;
+                (*this)[ tokens[0] ] = "";
             else
             if( size == 1 && tokens[0] != argv[0] )
-                (*this)[ tokens[0] ] = true;
+                (*this)[ tokens[0] ] = "";
         }
         // recreate args
         while( argc-- ) {
